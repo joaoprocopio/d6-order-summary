@@ -1,17 +1,14 @@
-/* Mobile: 375px
-- Desktop: 1440px */
-
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 /* colors */
 
 :root {
-	--pale_blue: hsl(225, 100%, 94%);
-	--bright_blue: hsl(245, 75%, 52%);
-	--very_pale_blue: hsl(225, 100%, 98%);
-	--desaturated_blue: hsl(224, 23%, 55%);
-	--dark_blue: hsl(223, 47%, 23%);
+	--pale_blue: #e0e8ff;
+	--bright_blue: #3829e0;
+	--very_pale_blue: #f5f7ff;
+	--desaturated_blue: #7280a7;
+	--dark_blue: #1f2f56;
 	--white: #ffffff;
 	background-image: url(../images/pattern-background-mobile.svg);
 	background-size: 100%;
@@ -28,8 +25,8 @@
 /* screen */
 
 #content {
-	height: 100vh;
 	width: 100vw;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,32 +42,96 @@
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-	box-shadow: 0 4px 16px -8px var(--grayish-blue);
 	background-color: var(--white);
 }
 
-.svg-container {
+.information-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 24px;
+	padding-right: 24px;
+	text-align: center;
+}
+
+/* flex wrapper */
+
+.text-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.checkout-wrapper {
+	width: 279px;
+	height: 81px;
+	display: flex;
+	flex-direction: row;
+}
+
+.price-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttons-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+/* flex items */
+
+/* svg's */
+
+.hero-svg {
+	width: 100%;
+	height: 160px;
 	background-image: url(../images/illustration-hero.svg);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	width: 327px;
-	height: 160px;
 }
 
-.information-container {
-	padding: 24px;
+.music-svg {
+	width: 48px;
+	height: 48px;
+	background-image: url(../images/icon-music.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
-/* flex items */
 
+/* text */
+
+.header {
+	font-size: 22px;
+	color: var(--dark_blue);
+	font-weight: 900;
+	padding-top: 36px;
+	line-height: 100%;
+}
+
+.description {
+	font-size: 16px;
+	color: var(--desaturated_blue);
+	width: fit-content;
+	padding-top: 22px;
+}
+
+/* buttons */
+
+.proceed {
+	width: 279px;
+	height: 50px;
+	border-radius: 12px;
+	font-weight: 700;
+	color: var(--very_pale_blue);
+	background-color: var(--bright_blue);
+	border: none;
+}
+
+/* media query */
 @media screen and (min-width: 1440px) {
 	:root {
 		background-image: url(../images/pattern-background-desktop.svg);
 	}
-
-	/* need to change box container h and w
-	in order to give responsivity to desktop devices 
-	.box-container {
-		width: ;
-		height: ;
-	} */
 }
