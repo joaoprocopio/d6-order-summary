@@ -1,71 +1,45 @@
+/* Mobile: 375px
+- Desktop: 1440px */
+
 @import "./reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 /* colors */
 
 :root {
-	--white: #ffffff;
-	--light-gray: #d6e2f0;
-	--grayish-blue: #7b879d;
-	--dark-blue: #1f3251;
+	/* primary */
+	--pale_blue: hsl(225, 100%, 94%);
+	--bright_blue: hsl(245, 75%, 52%);
+	/* secondary */
+	--pale_blue: hsl(225, 100%, 94%);
+	--bright_blue: hsl(245, 75%, 52%);
+	/* neutral */
+	--very_pale_blue: hsl(225, 100%, 98%);
+	--desaturated_blue: hsl(224, 23%, 55%);
+	--dark_blue: hsl(223, 47%, 23%);
 }
 
 /* font standardizing */
 
 * {
-	font-family: "Outfit", sans-serif;
+	font-family: "Red Hat Display", sans-serif;
 }
 
 /* screen */
 
-#content {
-	width: 100vw;
+body {
 	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--light-gray);
+	width: 100vw;
+	background-image: url(../images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
-
 /* flex container */
-
-.box-container {
-	display: flex;
-	flex-direction: column;
-	width: 320px;
-	height: 497px;
-	padding: 16px;
-	border-radius: 16px;
-	overflow: hidden;
-	box-shadow: 0 4px 16px -8px var(--grayish-blue);
-	background-color: var(--white);
-}
 
 /* flex items */
 
-.image {
-	border-radius: 8px;
-	width: 288px;
-	height: 288px;
-}
-
-.text-container {
-	padding: 0 15px;
-	text-align: center;
-}
-
-.heading {
-	font-weight: 700;
-	font-size: 21px;
-	padding-top: 25px;
-	line-height: 1.3em;
-	color: var(--dark-blue);
-}
-
-.paragraph {
-	font-weight: 400;
-	font-size: 16px;
-	padding-top: 16px;
-	line-height: 1.2em;
-	color: var(--grayish-blue);
+@media screen and (min-width: 1440px) {
+	body {
+		background-image: url(../images/pattern-background-desktop.svg);
+	}
 }
