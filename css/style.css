@@ -7,16 +7,16 @@
 /* colors */
 
 :root {
-	/* primary */
 	--pale_blue: hsl(225, 100%, 94%);
 	--bright_blue: hsl(245, 75%, 52%);
-	/* secondary */
-	--pale_blue: hsl(225, 100%, 94%);
-	--bright_blue: hsl(245, 75%, 52%);
-	/* neutral */
 	--very_pale_blue: hsl(225, 100%, 98%);
 	--desaturated_blue: hsl(224, 23%, 55%);
 	--dark_blue: hsl(223, 47%, 23%);
+	--white: #ffffff;
+	background-image: url(../images/pattern-background-mobile.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: var(--pale_blue);
 }
 
 /* font standardizing */
@@ -27,19 +27,50 @@
 
 /* screen */
 
-body {
+#content {
 	height: 100vh;
 	width: 100vw;
-	background-image: url(../images/pattern-background-mobile.svg);
-	background-repeat: no-repeat;
-	background-size: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 /* flex container */
 
+.box-container {
+	width: 327px;
+	height: 567px;
+	border-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 0 4px 16px -8px var(--grayish-blue);
+	background-color: var(--white);
+}
+
+.svg-container {
+	background-image: url(../images/illustration-hero.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 327px;
+	height: 160px;
+}
+
+.information-container {
+	padding: 24px;
+}
 /* flex items */
 
 @media screen and (min-width: 1440px) {
-	body {
+	:root {
 		background-image: url(../images/pattern-background-desktop.svg);
 	}
+
+	/* need to change box container h and w
+	in order to give responsivity to desktop devices 
+	.box-container {
+		width: ;
+		height: ;
+	} */
 }
