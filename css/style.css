@@ -43,7 +43,7 @@
 	align-items: center;
 	overflow: hidden;
 	background-color: var(--white);
-	box-shadow: 0 4px 16px -8px var(--dark_blue);
+	box-shadow: 0 16px 32px -8px var(--desaturated_blue);
 }
 
 .information-container {
@@ -156,16 +156,16 @@
 	height: 50px;
 	border-radius: 12px;
 	font-weight: 900;
-	font-size: 14px;
-	color: var(--very_pale_blue);
+	font-size: 15px;
+	color: var(--white);
 	background-color: var(--bright_blue);
 	border: none;
 	text-decoration: none;
-	box-shadow: 0 12px 16px -8px var(--bright_blue);
+	box-shadow: 0 10px 20px -10px var(--bright_blue);
 }
 
 .cancel {
-	margin-top: 20px;
+	margin-top: 24px;
 	text-decoration: none;
 	font-weight: 900;
 	font-size: 15px;
